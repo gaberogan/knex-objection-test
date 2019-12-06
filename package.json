@@ -1,0 +1,27 @@
+{
+  "name": "nodetest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "migrate": "knex migrate:latest",
+    "rollback": "knex migrate:rollback",
+    "seed": "knex seed:run",
+    "server": "nodemon server",
+    "start": "npm run migrate && npm run seed && npm run server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/cors": "^3.0.0",
+    "knex": "^0.20.3",
+    "koa": "^2.11.0",
+    "koa-router": "^7.4.0",
+    "objection": "^2.0.3",
+    "pg": "^7.14.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.1"
+  }
+}
